@@ -2,6 +2,7 @@
 function card (_name, _sprite) constructor {
     name = _name;
     sprite = _sprite;
+    type = "Card";
     cost = 0;
     treasure = 0;
     victorypoints = 0;
@@ -9,21 +10,41 @@ function card (_name, _sprite) constructor {
     buy = 0;
     draw = 0;
     effect = function() {};
-    afterturn_effect = function() {};
+    defense = function() {};
 }
 
 function victory_card(_name, _sprite, _cost, _victorypoints) : card() constructor {
+    name = _name;
+    sprite = _sprite;
+    type = "Victory";
     cost = _cost;
     victorypoints = _victorypoints;
 }
 
 function treasure_card(_name, _sprite, _cost, _treasure) : card() constructor {
+    name = _name;
+    sprite = _sprite;
+    type = "Treasure";
     cost = _cost;
     treasure = _treasure;
 }
 
-function kingdom_card(_name, _sprite, _cost, _treasure, _vp, _action, _buy, _draw, _effect, _afterturn_effect)
-{
+// @desc Kingdom Card constructor
+// @param {String} name
+// @param {Sprite} sprite
+// @param {Real} cost
+// @param {Real} treasure
+// @param {Real} victorypoints
+// @param {Real} action
+// @param {Real} buy
+// @param {Real} draw
+// @param {Function} effect
+// @param {Function} defense
+
+function kingdom_card(_name, _sprite, _cost, _treasure, _vp, _action, _buy, _draw, _effect, _defense) constructor {
+    name = _name;
+    sprite = _sprite;
+    type = "Action";
     cost = _cost;
     treasure = _treasure;
     victorypoints = _vp;
@@ -31,5 +52,5 @@ function kingdom_card(_name, _sprite, _cost, _treasure, _vp, _action, _buy, _dra
     buy = _buy;
     draw = _draw;
     effect = _effect;
-    afterturn_effect = _afterturn_effect;
+    _defense = _defense;
 }
