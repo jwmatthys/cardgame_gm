@@ -1,5 +1,3 @@
-victory_points = 0;
-treasure = 0;
 deck = ds_list_create();
 discard_pile = ds_list_create();
 draw_pile = ds_list_create();
@@ -8,7 +6,6 @@ starting_deck(deck);
 randomize();
 shuffle_deck(deck, discard_pile, draw_pile);
 draw_hand(hand, deck, discard_pile, draw_pile);
-show_debug_message("Treasure in hand: {0}", treasure_in_hand(hand));
 update_victory_points(deck);
 
 ///////////////////////////////////////////////////////////
