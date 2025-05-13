@@ -1,6 +1,6 @@
 supply = [];
 var i = 0
-for (i = 0; i < 17; i++) supply[i] = [];
+//for (i = 0; i < 17; i++) supply[i] = [];
 
 function create_supply_base(num_players) {
     if (num_players == 2) {

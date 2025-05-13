@@ -19,11 +19,7 @@ function update_victory_points()
 }
 
 function update_treasure() {
-    var hand_treasure = 0;
-    for (i=0; i<ds_list_size(hand); i++) {
-        hand_treasure += hand[|i].treasure;
-    }
-    treasure += hand_treasure;
+    treasure += treasure_in_hand();
 }
 
 function shuffle_deck()
@@ -48,5 +44,9 @@ function draw_hand()
 }
 
 function treasure_in_hand() {
-    
+    var hand_treasure = 0;
+        for (i=0; i<ds_list_size(hand); i++) {
+        hand_treasure += hand[|i].treasure;
+    }
+    return hand_treasure;
 }

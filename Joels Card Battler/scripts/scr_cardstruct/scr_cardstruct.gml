@@ -1,8 +1,15 @@
-// 
+enum CardType {
+    card,
+    victory,
+    treasure,
+    action
+}
+
+
 function card (_name, _sprite) constructor {
     name = _name;
     sprite = _sprite;
-    type = "Card";
+    type = CardType.card;
     cost = 0;
     treasure = 0;
     victorypoints = 0;
@@ -10,13 +17,12 @@ function card (_name, _sprite) constructor {
     buy = 0;
     draw = 0;
     effect = function() {};
-    defense = function() {};
 }
 
 function victory_card(_name, _sprite, _cost, _victorypoints) : card() constructor {
     name = _name;
     sprite = _sprite;
-    type = "Victory";
+    type = CardType.victory;
     cost = _cost;
     victorypoints = _victorypoints;
 }
@@ -24,7 +30,7 @@ function victory_card(_name, _sprite, _cost, _victorypoints) : card() constructo
 function treasure_card(_name, _sprite, _cost, _treasure) : card() constructor {
     name = _name;
     sprite = _sprite;
-    type = "Treasure";
+    type = CardType.treasure;
     cost = _cost;
     treasure = _treasure;
 }
@@ -44,7 +50,7 @@ function treasure_card(_name, _sprite, _cost, _treasure) : card() constructor {
 function kingdom_card(_name, _sprite, _cost, _treasure, _vp, _action, _buy, _draw, _effect, _defense) constructor {
     name = _name;
     sprite = _sprite;
-    type = "Action";
+    type = CardType.action;
     cost = _cost;
     treasure = _treasure;
     victorypoints = _vp;
@@ -52,5 +58,4 @@ function kingdom_card(_name, _sprite, _cost, _treasure, _vp, _action, _buy, _dra
     buy = _buy;
     draw = _draw;
     effect = _effect;
-    _defense = _defense;
 }

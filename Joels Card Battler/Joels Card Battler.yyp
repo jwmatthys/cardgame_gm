@@ -29,7 +29,6 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_cardstruct","path":"scripts/scr_cardstruct/scr_cardstruct.yy",},},
-    {"id":{"name":"scr_deck_utils","path":"scripts/scr_deck_utils/scr_deck_utils.yy",},},
     {"id":{"name":"scr_library","path":"scripts/scr_library/scr_library.yy",},},
     {"id":{"name":"scr_supply","path":"scripts/scr_supply/scr_supply.yy",},},
   ],
