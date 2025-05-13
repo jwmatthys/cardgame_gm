@@ -6,7 +6,7 @@ enum CardType {
 }
 
 
-function card (_name, _sprite) constructor {
+function card (_name="Card", _sprite="") constructor {
     name = _name;
     sprite = _sprite;
     type = CardType.card;
